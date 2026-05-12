@@ -205,16 +205,6 @@ eclipse_timpani/
 
 ---
 
-## 📈 Migration Milestones
-
-| Milestone | Status | Documentation | Completion Date |
-|-----------|--------|---------------|-----------------|
-| **M1: Timpani-O Rust Migration** | ✅ Complete | [HLD/timpani-o/](architecture/HLD/timpani-o/) | March 2026 |
-| **M2: Timpani-N Rust Migration** | 🔄 In Progress | [HLD/timpani-n/](architecture/HLD/timpani-n/) | TBD |
-| **M3: gRPC Integration** | 🔄 In Progress | [gRPC Architecture](architecture/grpc_architecture.md) | TBD |
-| **M4: Production Hardening** | ⏸️ Planned | TBD | June 2026 |
-
----
 
 ## 🆘 Support & Contact
 
