@@ -6,7 +6,7 @@
 
 # Project Structure
 
-This document describes the current structure of the TIMPANI repository. All files and folders listed here are considered stable and will remain untouched in the future, except for the `timpani_rust` folder, which will be the sole focus of ongoing development.
+This document describes the current structure of the timpani repository. All files and folders listed here are considered stable and will remain untouched in the future, except for the `timpani_rust` folder, which will be the sole focus of ongoing development.
 
 ---
 
@@ -17,7 +17,7 @@ This document describes the current structure of the TIMPANI repository. All fil
 ## Current Repository Layout
 
 ```bash
-TIMPANI/
+timpani/
 ├── LICENSE
 ├── README.md
 ├── doc/
@@ -26,8 +26,8 @@ TIMPANI/
 │   │   ├── timpani_architecture.md  # System architecture
 │   │   ├── grpc_architecture.md     # gRPC design
 │   │   └── HLD/                     # High-Level Design documents
-│   │       ├── timpani-o/           # Timpani-O component HLDs (10 docs)
-│   │       └── timpani-n/           # Timpani-N component HLDs (10 docs)
+│   │       ├── timpani-o/           # timpani-o component HLDs (10 docs)
+│   │       └── timpani-n/           # timpani-n component HLDs (10 docs)
 │   ├── contribution/
 │   │   ├── coding-rule.md
 │   │   └── guidelines-en.md
@@ -178,9 +178,9 @@ The `doc/` directory contains all project documentation:
 
 | Component | Legacy | Rust | Status | Documentation |
 |-----------|--------|------|--------|---------------|
-| **Timpani-O** | C++ | Rust | ✅ Complete | [HLD/timpani-o/](../architecture/HLD/timpani-o/) |
-| **Timpani-N** | C | Rust | 🔄 Partial | [HLD/timpani-n/](../architecture/HLD/timpani-n/) |
-| **Communication** | D-Bus | gRPC | ✅ Timpani-O, ⏸️ Timpani-N | [grpc_architecture.md](../architecture/grpc_architecture.md) |
+| **timpani-o** | C++ | Rust | ✅ Complete | [HLD/timpani-o/](../architecture/HLD/timpani-o/) |
+| **timpani-n** | C | Rust | 🔄 Partial | [HLD/timpani-n/](../architecture/HLD/timpani-n/) |
+| **Communication** | D-Bus | gRPC | ✅ timpani-o, ⏸️ timpani-n | [grpc_architecture.md](../architecture/grpc_architecture.md) |
 
 ---
 

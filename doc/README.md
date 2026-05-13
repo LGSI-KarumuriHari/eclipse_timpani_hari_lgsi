@@ -3,17 +3,17 @@
 * SPDX-License-Identifier: MIT
 -->
 
-# TIMPANI Documentation Guide
+# timpani Documentation Guide
 
 **Last Updated:** May 12, 2026
-**Project:** Eclipse TIMPANI (Rust Migration)
+**Project:** Eclipse timpani (Rust Migration)
 **Version:** Milestone 1 & 2 (gRPC Integration)
 
 ---
 
 ## 📑 Documentation Overview
 
-This documentation provides a comprehensive guide to the TIMPANI project's migration from C/C++ to Rust, including architecture documentation, high-level design (HLD) comparisons, and implementation details. This structure is designed for **developers and contributors** to understand the system architecture and implementation.
+This documentation provides a comprehensive guide to the timpani project's migration from C/C++ to Rust, including architecture documentation, high-level design (HLD) comparisons, and implementation details. This structure is designed for **developers and contributors** to understand the system architecture and implementation.
 
 ---
 
@@ -24,7 +24,7 @@ This documentation provides a comprehensive guide to the TIMPANI project's migra
 
 System architecture, communication protocols, and high-level design documentation.
 
-- [TIMPANI Architecture](architecture/timpani_architecture.md) - Overall system architecture
+- [timpani Architecture](architecture/timpani_architecture.md) - Overall system architecture
 - [gRPC Architecture](architecture/grpc_architecture.md) - Communication layer design
 
 #### High-Level Design (HLD) Documents
@@ -32,7 +32,7 @@ System architecture, communication protocols, and high-level design documentatio
 
 Component-level HLD documents comparing legacy C/C++ with Rust implementations.
 
-**Timpani-O (Global Orchestrator):**
+**timpani-o (Global Orchestrator):**
 - [`HLD/timpani-o/`](architecture/HLD/timpani-o/) - 10 component HLD documents
   - 01: SchedInfo Service
   - 02: Fault Service Client
@@ -46,7 +46,7 @@ Component-level HLD documents comparing legacy C/C++ with Rust implementations.
   - 10: Error Handling
   - [README](architecture/HLD/timpani-o/README.md) - Component overview & migration themes
 
-**Timpani-N (Node Executor):**
+**timpani-n (Node Executor):**
 - [`HLD/timpani-n/`](architecture/HLD/timpani-n/) - 10 component HLD documents
   - 01: Initialization & Main
   - 02: Configuration Management ✅
@@ -101,8 +101,8 @@ graph TD
     end
 
     subgraph "2. Component HLD"
-        H1[Timpani-O HLD<br/>10 Components]
-        H2[Timpani-N HLD<br/>10 Components]
+        H1[timpani-o HLD<br/>10 Components]
+        H2[timpani-n HLD<br/>10 Components]
         H3[AS-IS vs WILL-BE<br/>Comparisons]
     end
 
@@ -154,8 +154,8 @@ eclipse_timpani/
 │   │   ├── timpani_architecture.md
 │   │   ├── grpc_architecture.md
 │   │   └── HLD/                  # High-Level Design documents
-│   │       ├── timpani-o/        # Timpani-O component HLDs
-│   │       └── timpani-n/        # Timpani-N component HLDs
+│   │       ├── timpani-o/        # timpani-o component HLDs
+│   │       └── timpani-n/        # timpani-n component HLDs
 │   ├── docs/                     # Implementation guides
 │   │   ├── api.md
 │   │   ├── getting-started.md
@@ -214,7 +214,7 @@ eclipse_timpani/
 - Consult [GitHub Issues](https://github.com/eclipse-timpani/timpani/issues)
 
 ### For Architecture Clarifications
-- Refer to [TIMPANI Architecture](architecture/timpani_architecture.md)
+- Refer to [timpani Architecture](architecture/timpani_architecture.md)
 - Review [gRPC Architecture](architecture/grpc_architecture.md)
 - Check component HLDs in [HLD/timpani-o/](architecture/HLD/timpani-o/) or [HLD/timpani-n/](architecture/HLD/timpani-n/)
 

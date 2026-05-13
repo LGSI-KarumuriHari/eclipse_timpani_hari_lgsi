@@ -11,7 +11,7 @@
 
 ## Component Overview
 
-Error Handling component provides structured error types, propagation mechanisms, and recovery strategies for all failure scenarios in Timpani-O, including scheduling failures, resource exhaustion, RPC errors, and configuration problems.
+Error Handling component provides structured error types, propagation mechanisms, and recovery strategies for all failure scenarios in timpani-o, including scheduling failures, resource exhaustion, RPC errors, and configuration problems.
 
 ---
 

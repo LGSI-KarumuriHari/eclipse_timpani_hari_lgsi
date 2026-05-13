@@ -3,10 +3,10 @@
 * SPDX-License-Identifier: MIT
 -->
 
-# Timpani-N High-Level Design (HLD) Documentation
+# timpani-n High-Level Design (HLD) Documentation
 
 **Project:** Eclipse Timpani - Real-Time Task Orchestration Framework
-**Component:** Timpani-N (Node Executor)
+**Component:** timpani-n (Node Executor)
 **Migration:** C → Rust (In Progress - Initialization Phase Only)
 **Status:** 🔄 Milestone 2 In Progress
 **Document Set Version:** 1.0
@@ -16,7 +16,7 @@
 
 ## Overview
 
-This directory contains 10 High-Level Design (HLD) documents for Timpani-N (node executor) components. **Unlike Timpani-O**, these documents are primarily **AS-IS focused** because the Rust implementation is still in early development (only initialization/configuration complete).
+This directory contains 10 High-Level Design (HLD) documents for timpani-n (node executor) components. **Unlike timpani-o**, these documents are primarily **AS-IS focused** because the Rust implementation is still in early development (only initialization/configuration complete).
 
 ### Document Structure
 - **AS-IS (C Implementation):** Comprehensive documentation from `timpani-n/src/` (legacy C code)
@@ -86,9 +86,9 @@ This directory contains 10 High-Level Design (HLD) documents for Timpani-N (node
 
 ---
 
-## Key Differences from Timpani-O HLD
+## Key Differences from timpani-o HLD
 
-| Aspect | Timpani-O HLD | Timpani-N HLD |
+| Aspect | timpani-o HLD | timpani-n HLD |
 |--------|---------------|---------------|
 | **Rust Status** | ✅ Complete (M1) | 🔄 Initialization only (M2 in progress) |
 | **Focus** | AS-IS vs WILL-BE comparison | Primarily AS-IS (C documentation) |
@@ -98,29 +98,29 @@ This directory contains 10 High-Level Design (HLD) documents for Timpani-N (node
 
 ---
 
-## Timpani-N Architecture
+## timpani-n Architecture
 
 ### System Role
-Timpani-N is the **node executor** in the distributed Timpani system:
-- **Receives** scheduled tasks from Timpani-O (global orchestrator)
+timpani-n is the **node executor** in the distributed Timpani system:
+- **Receives** scheduled tasks from timpani-o (global orchestrator)
 - **Executes** time-triggered tasks with real-time guarantees
 - **Monitors** task execution via eBPF
-- **Reports** deadline misses back to Timpani-O
+- **Reports** deadline misses back to timpani-o
 
 ### High-Level Flow
 
 ```
-Timpani-O (Orchestrator)
+timpani-o (Orchestrator)
   ↓ (gRPC: GetSchedInfo, SyncTimer, ReportDMiss)
-Timpani-N (Node Executor)
+timpani-n (Node Executor)
   ↓ (Load eBPF programs)
 Linux Kernel (eBPF hooks)
   ↓ (Signal tasks)
 Task Processes (exprocs)
   ↓ (Ring buffer events)
-Timpani-N (Deadline monitoring)
+timpani-n (Deadline monitoring)
   ↓ (Report deadline miss via gRPC)
-Timpani-O → Fault Manager
+timpani-o → Fault Manager
 ```
 
 ---
@@ -176,7 +176,7 @@ Timpani-O → Fault Manager
 Start with these to understand the legacy system:
 1. [03 - Time Trigger Core](03-time-trigger-core.md) - Main execution loop
 2. [07 - eBPF Monitoring](07-ebpf-monitoring.md) - Deadline detection mechanism
-3. [08 - Communication](08-communication-libtrpc.md) - Interaction with Timpani-O
+3. [08 - Communication](08-communication-libtrpc.md) - Interaction with timpani-o
 
 ### For Rust Migration Status
 Check these to see what's been ported:
@@ -235,8 +235,8 @@ Check these to see what's been ported:
 
 | Term | Definition |
 |------|------------|
-| **Timpani-N** | Node executor - runs on each compute node |
-| **Timpani-O** | Global orchestrator - distributes tasks to nodes |
+| **timpani-n** | Node executor - runs on each compute node |
+| **timpani-o** | Global orchestrator - distributes tasks to nodes |
 | **Time-Triggered** | Tasks activated by timer signals, not events |
 | **Hyperperiod** | LCM of all task periods (smallest repeating window) |
 | **eBPF** | Extended Berkeley Packet Filter (kernel monitoring) |
@@ -263,7 +263,7 @@ Check these to see what's been ported:
 - ⏸️ Timer management
 
 ### Phase 3: Communication (Planned)
-- ⏸️ gRPC client to Timpani-O
+- ⏸️ gRPC client to timpani-o
 - ⏸️ Task schedule retrieval
 - ⏸️ Synchronization protocol
 

@@ -11,7 +11,7 @@
 
 ## Component Overview
 
-The Global Scheduler component implements the core task allocation logic for Timpani-O. It receives a set of real-time tasks and distributes them across available compute nodes and CPUs, ensuring schedulability constraints are met.
+The Global Scheduler component implements the core task allocation logic for timpani-o. It receives a set of real-time tasks and distributes them across available compute nodes and CPUs, ensuring schedulability constraints are met.
 
 ---
 
