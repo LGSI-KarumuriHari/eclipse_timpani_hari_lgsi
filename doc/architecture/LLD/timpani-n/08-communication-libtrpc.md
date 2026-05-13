@@ -5,6 +5,23 @@
 
 # LLD: Communication (libtrpc → gRPC)
 
+**Document Information:**
+- **Issuing Author:** Eclipse timpani Team
+- **Configuration ID:** timpani-n-lld-08
+- **Document Status:** Draft
+- **Last Updated:** 2026-05-13
+
+---
+
+## Revision History
+
+| Version | Date | Comment | Author | Approver |
+|---------|------|---------|--------|----------|
+| 0.0b | 2026-05-13 | Updated documentation metadata and standards compliance | LGSI-KarumuriHari | - |
+| 0.0a | 2026-02-24 | Initial LLD document creation | Eclipse timpani Team | - |
+
+---
+
 **Component Type:** RPC Communication
 **Responsibility:** Communication with timpani-o, schedule retrieval, synchronization, deadline miss reporting
 **Status:** ✅ Complete in Rust (gRPC client implemented)

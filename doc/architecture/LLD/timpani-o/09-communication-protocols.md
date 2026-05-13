@@ -5,6 +5,23 @@
 
 # LLD: Communication Protocols Component
 
+**Document Information:**
+- **Issuing Author:** Eclipse timpani Team
+- **Configuration ID:** timpani-o-lld-09
+- **Document Status:** Draft
+- **Last Updated:** 2026-05-13
+
+---
+
+## Revision History
+
+| Version | Date | Comment | Author | Approver |
+|---------|------|---------|--------|----------|
+| 0.0b | 2026-05-13 | Updated documentation metadata and standards compliance | LGSI-KarumuriHari | - |
+| 0.0a | 2026-02-24 | Initial LLD document creation | Eclipse timpani Team | - |
+
+---
+
 **Component Type:** Protocol Definitions & Wire Format
 **Responsibility:** Define gRPC services, message formats, and protocol buffers for all communication
 **Status:** ✅ Migrated (C++ → Rust, D-Bus → gRPC)

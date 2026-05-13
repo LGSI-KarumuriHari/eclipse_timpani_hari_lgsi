@@ -5,6 +5,23 @@
 
 # timpani-o Low-Level Design (LLD) Documentation
 
+**Document Information:**
+- **Issuing Author:** Eclipse timpani Team
+- **Configuration ID:** timpani-o-lld-index
+- **Document Status:** Draft
+- **Last Updated:** 2026-05-13
+
+---
+
+## Revision History
+
+| Version | Date | Comment | Author | Approver |
+|---------|------|---------|--------|----------|
+| 0.0b | 2026-05-13 | Updated documentation metadata and standards compliance | LGSI-KarumuriHari | - |
+| 0.0a | 2026-02-24 | Initial LLD documentation set | Eclipse timpani Team | - |
+
+---
+
 **Project:** Eclipse Timpani - Real-Time Task Orchestration Framework
 **Component:** timpani-o (Global Orchestrator)
 **Migration:** C++ → Rust

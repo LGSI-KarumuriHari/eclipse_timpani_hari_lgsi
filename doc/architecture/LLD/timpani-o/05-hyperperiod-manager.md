@@ -5,6 +5,23 @@
 
 # LLD: Hyperperiod Manager Component
 
+**Document Information:**
+- **Issuing Author:** Eclipse timpani Team
+- **Configuration ID:** timpani-o-lld-05
+- **Document Status:** Draft
+- **Last Updated:** 2026-05-13
+
+---
+
+## Revision History
+
+| Version | Date | Comment | Author | Approver |
+|---------|------|---------|--------|----------|
+| 0.0b | 2026-05-13 | Updated documentation metadata and standards compliance | LGSI-KarumuriHari | - |
+| 0.0a | 2026-02-24 | Initial LLD document creation | Eclipse timpani Team | - |
+
+---
+
 **Component Type:** Mathematical Utility
 **Responsibility:** Calculate Least Common Multiple (LCM) of task periods for hyperperiod determination
 **Status:** ✅ Migrated (C++ → Rust)
