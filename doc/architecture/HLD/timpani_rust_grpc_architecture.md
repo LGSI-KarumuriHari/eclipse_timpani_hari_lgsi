@@ -9,7 +9,7 @@
 - **Issuing Author:** Eclipse timpani Team
 - **Configuration ID:** timpani-arch-grpc
 - **Document Status:** Draft
-- **Last Updated:** 2026-05-13
+- **Last Updated:** 2026-05-14
 
 ---
 
@@ -17,6 +17,7 @@
 
 | Version | Date | Comment | Author | Approver |
 |---------|------|---------|--------|----------|
+| 0.0c | 2026-05-14 | Updated legend color scheme: gRPC communication links styled with orange (#f57c00) | LGSI-KarumuriHari | - |
 | 0.0b | 2026-05-13 | Added diagram legends highlighting timpani-o and timpani-n scope | LGSI-KarumuriHari | - |
 | 0.0a | 2026-05-13 | Initial gRPC architecture documentation | Eclipse timpani Team | - |
 

@@ -9,7 +9,7 @@
 - **Issuing Author:** LGSI-KarumuriHari(Eclipse timpani Team)
 - **Configuration ID:** timpani-req-spec
 - **Document Status:** Draft
-- **Last Updated:** 2026-05-13
+- **Last Updated:** 2026-05-14
 
 ---
 
@@ -17,6 +17,7 @@
 
 | Version | Date | Comment | Author | Approver |
 |---------|------|---------|--------|----------|
+| 0.0c | 2026-05-14 | Added gPTP time synchronization requirement (Milestone 3) | LGSI-KarumuriHari | - |
 | 0.0b | 2026-05-13 | Expanded functional and non-functional requirements | LGSI-KarumuriHari | - |
 | 0.0a | 2026-02-24 | Initial requirements specification | Eclipse timpani Team | - |
 
@@ -308,6 +309,52 @@ This requirements specification covers:
 
 ---
 
+### FR-9: Time Synchronization (gPTP)
+
+#### FR-9.1: IEEE 802.1AS Protocol Support
+**Requirement:** The system SHALL support gPTP (generalized Precision Time Protocol) for distributed time synchronization.
+- **FR-9.1.1:** Implement IEEE 802.1AS-2020 time synchronization protocol
+- **FR-9.1.2:** Support both grandmaster and slave clock roles
+- **FR-9.1.3:** Synchronize system clocks across all timpani-n nodes
+- **FR-9.1.4:** Maintain time synchronization accuracy ≤ 1 microsecond
+- **FR-9.1.5:** Support PTP over Ethernet (Layer 2)
+
+**Priority:** High (Milestone 3)
+**Component:** timpani-n (Time Sync Manager), timpani-o (Clock Coordinator)
+
+#### FR-9.2: Clock Synchronization
+**Requirement:** The system SHALL maintain synchronized clocks across distributed nodes.
+- **FR-9.2.1:** Synchronize CLOCK_REALTIME across all nodes
+- **FR-9.2.2:** Compensate for network propagation delays
+- **FR-9.2.3:** Handle clock drift correction automatically
+- **FR-9.2.4:** Detect and report synchronization failures
+- **FR-9.2.5:** Support fallback to NTP when gPTP unavailable
+
+**Priority:** High (Milestone 3)
+**Component:** timpani-n (Time Sync Manager)
+
+#### FR-9.3: Synchronized Task Activation
+**Requirement:** The system SHALL coordinate task activation using synchronized time.
+- **FR-9.3.1:** Use gPTP-synchronized time for schedule activation
+- **FR-9.3.2:** Align task release times across nodes within 10 microseconds
+- **FR-9.3.3:** Validate time synchronization before schedule execution
+- **FR-9.3.4:** Reject schedules if synchronization quality insufficient
+
+**Priority:** High (Milestone 3)
+**Component:** timpani-n (RT Scheduler, Time Sync Manager)
+
+#### FR-9.4: Time Synchronization Monitoring
+**Requirement:** The system SHALL monitor time synchronization quality.
+- **FR-9.4.1:** Measure clock offset between nodes
+- **FR-9.4.2:** Track synchronization accuracy over time
+- **FR-9.4.3:** Report synchronization degradation events
+- **FR-9.4.4:** Provide time synchronization status via gRPC API
+
+**Priority:** Medium (Milestone 3)
+**Component:** timpani-o (Monitoring), timpani-n (Time Sync Manager)
+
+---
+
 ## Non-Functional Requirements
 
 ### NFR-1: Performance
@@ -538,6 +585,7 @@ This requirements specification covers:
 | FR-6.1 | Core Layer | Configuration Manager | Unit tests |
 | FR-7.3 | Core Layer | Main Controller, Signal Handler | System tests |
 | FR-8.1 - FR-8.2 | Execution Layer | Timer Manager | Unit tests, timing tests |
+| FR-9.1 - FR-9.4 | Time Synchronization | Time Sync Manager, Clock Coordinator | System tests, timing tests |
 | NFR-1.1 | All layers | All components | Latency benchmarks |
 | NFR-5.1 | All layers | All components | Cross-platform tests |
 
